@@ -1,7 +1,6 @@
 from datetime import datetime as dt
 import csv
 
-
 with open('text21.csv',newline='') as f:
     r = csv.reader(f)
     data = [line for line in r]
