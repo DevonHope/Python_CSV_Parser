@@ -91,41 +91,45 @@ def addHeader(filename):
         else:
             print("headers for " + filename + " already added!")
 
-addHeader('text21.csv')
-addHeader('imagept21.csv')
+def main():
 
-f_names = ['text21.csv','imagept21.csv']
+    addHeader('text21.csv')
+    addHeader('imagept21.csv')
 
-with open('results.csv', 'w') as r_file:
-    fieldnames = ['ID','total_logins','tot_good', 'tot_bad','time_good', 'time_bad']
-    writer = csv.DictWriter(r_file, fieldnames=fieldnames)
-    writer.writeheader()
+    f_names = ['text21.csv','imagept21.csv']
 
-user_dict_txt = {}
-user_dict_img = {}
+    with open('results.csv', 'w') as r_file:
+        fieldnames = ['ID','total_logins','tot_good', 'tot_bad','time_good', 'time_bad']
+        writer = csv.DictWriter(r_file, fieldnames=fieldnames)
+        writer.writeheader()
 
-user_dict_txt = parse_the_data(f_names[0], user_dict_txt)
-user_dict_img = parse_the_data(f_names[1], user_dict_img)
+    user_dict_txt = {}
+    user_dict_img = {}
 
-with open('results.csv', 'a') as r_file:
-    dash = "------------"
-    r_file.write('\n')
-    r_file.write(f_names[0] + dash + dash + dash + dash + dash)
-    r_file.write('\n')
-    fieldnames = ['ID','total_logins','tot_good', 'tot_bad','time_good', 'time_bad']
-    writer = csv.DictWriter(r_file,fieldnames=fieldnames)
-    for id in user_dict_txt:
-        writer.writerow({'ID': id, 'total_logins':user_dict_txt[id][4],
-        'tot_good':user_dict_txt[id][2],'tot_bad':user_dict_txt[id][3],
-        'time_good':user_dict_txt[id][0],'time_bad':user_dict_txt[id][1]})
-    r_file.write('\n')
+    user_dict_txt = parse_the_data(f_names[0], user_dict_txt)
+    user_dict_img = parse_the_data(f_names[1], user_dict_img)
 
-    dash = "------------"
-    r_file.write('\n')
-    r_file.write(f_names[1] + dash + dash + dash + dash + dash)
-    r_file.write('\n')
-    for id in user_dict_img:
-        writer.writerow({'ID': id, 'total_logins':user_dict_img[id][4],
-        'tot_good':user_dict_img[id][2],'tot_bad':user_dict_img[id][3],
-        'time_good':user_dict_img[id][0],'time_bad':user_dict_img[id][1]})
-    print("Data has been parsed and written too file: results.csv")
+    with open('results.csv', 'a') as r_file:
+        dash = "------------"
+        r_file.write('\n')
+        r_file.write(f_names[0] + dash + dash + dash + dash + dash)
+        r_file.write('\n')
+        fieldnames = ['ID','total_logins','tot_good', 'tot_bad','time_good', 'time_bad']
+        writer = csv.DictWriter(r_file,fieldnames=fieldnames)
+        for id in user_dict_txt:
+            writer.writerow({'ID': id, 'total_logins':user_dict_txt[id][4],
+            'tot_good':user_dict_txt[id][2],'tot_bad':user_dict_txt[id][3],
+            'time_good':user_dict_txt[id][0],'time_bad':user_dict_txt[id][1]})
+        r_file.write('\n')
+
+        dash = "------------"
+        r_file.write('\n')
+        r_file.write(f_names[1] + dash + dash + dash + dash + dash)
+        r_file.write('\n')
+        for id in user_dict_img:
+            writer.writerow({'ID': id, 'total_logins':user_dict_img[id][4],
+            'tot_good':user_dict_img[id][2],'tot_bad':user_dict_img[id][3],
+            'time_good':user_dict_img[id][0],'time_bad':user_dict_img[id][1]})
+        print("Data has been parsed and written too file: results.csv")
+
+main()
