@@ -1,36 +1,6 @@
 from datetime import datetime as dt
 import csv
 
-with open('text21.csv',newline='') as f:
-    r = csv.reader(f)
-    data = [line for line in r]
-    if data[0] != ['date', 'id', 'website', 'pswdType', 'idk', 'submition', 'progress', 'browser']:
-        #writes header to text21 file
-        with open('text21.csv',newline='') as f:
-            r = csv.reader(f)
-            data = [line for line in r]
-        with open('text21.csv','w',newline='') as f:
-            w = csv.writer(f)
-            w.writerow(['date', 'id', 'website', 'pswdType', 'idk', 'submition', 'progress', 'browser'])
-            w.writerows(data)
-    else:
-        print("headers for text21 already added!")
-
-with open('imagept21.csv',newline='') as f:
-    r = csv.reader(f)
-    data = [line for line in r]
-    if data[0] != ['date', 'id', 'website', 'pswdType', 'idk', 'submition', 'progress', 'browser']:
-        #writes headers to image file
-        with open('imagept21.csv',newline='') as f:
-            r = csv.reader(f)
-            data = [line for line in r]
-        with open('imagept21.csv','w',newline='') as f:
-            w = csv.writer(f)
-            w.writerow(['date', 'id', 'website', 'pswdType', 'idk', 'submition', 'progress', 'browser'])
-            w.writerows(data)
-    else:
-        print("headers for imagept21 already added!")
-
 def parse_the_data(filename, user_dict):
 
     glCounter = 0
@@ -104,6 +74,25 @@ def parse_the_data(filename, user_dict):
                         user_dict[id][1].append(seconds[1])
 
     return user_dict
+
+def addHeader(filename):
+    with open(filename,newline='') as f:
+        r = csv.reader(f)
+        data = [line for line in r]
+        if data[0] != ['date', 'id', 'website', 'pswdType', 'idk', 'submition', 'progress', 'browser']:
+            #writes header to text21 file
+            with open(filename,newline='') as f:
+                r = csv.reader(f)
+                data = [line for line in r]
+            with open(filename,'w',newline='') as f:
+                w = csv.writer(f)
+                w.writerow(['date', 'id', 'website', 'pswdType', 'idk', 'submition', 'progress', 'browser'])
+                w.writerows(data)
+        else:
+            print("headers for " + filename + " already added!")
+
+addHeader('text21.csv')
+addHeader('imagept21.csv')
 
 f_names = ['text21.csv','imagept21.csv']
 
