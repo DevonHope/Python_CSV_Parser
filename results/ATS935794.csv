@@ -1,0 +1,20 @@
+date,id,website,pswdType,idk,submition,progress,browser
+2020-4-1 19:10:53,ATS935794,Email,textrandom,az09-5,create,start,Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/80.0.3987.149 Safari/537.36
+2020-4-1 19:11:11,ATS935794,Email,textrandom,az09-5,create,pwtest,good
+2020-4-1 19:11:17,ATS935794,Email,textrandom,az09-5,create,passwordSubmited,pw: RatRatAlligatorArmadillo
+2020-4-1 19:11:17,ATS935794,Email,textrandom,az09-5,create,done,Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/80.0.3987.149 Safari/537.36
+2020-4-1 19:11:34,ATS935794,Social,textrandom,az09-5,create,start,Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/80.0.3987.149 Safari/537.36
+2020-4-1 19:11:50,ATS935794,Social,textrandom,az09-5,create,pwtest,good
+2020-4-1 19:11:51,ATS935794,Social,textrandom,az09-5,create,passwordSubmited,pw: ChameleonWalrusChameleonFox
+2020-4-1 19:11:51,ATS935794,Social,textrandom,az09-5,create,done,Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/80.0.3987.149 Safari/537.36
+2020-4-1 19:12:2,ATS935794,Banking,textrandom,az09-5,create,start,Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/80.0.3987.149 Safari/537.36
+2020-4-1 19:12:27,ATS935794,Banking,textrandom,az09-5,create,pwtest,good
+2020-4-1 19:12:34,ATS935794,Banking,textrandom,az09-5,create,passwordSubmited,pw: LemurAlligatorDragonflyDragonfly
+2020-4-1 19:12:34,ATS935794,Banking,textrandom,az09-5,create,done,Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/80.0.3987.149 Safari/537.36
+2020-4-1 19:12:45,ATS935794,Email,textrandom,az09-5,enter,start,Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/80.0.3987.149 Safari/537.36
+2020-4-1 19:13:28,ATS935794,Email,textrandom,az09-5,login,failure,Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/80.0.3987.149 Safari/537.36
+2020-4-1 19:13:43,ATS935794,Email,textrandom,az09-5,login,success,Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/80.0.3987.149 Safari/537.36
+2020-4-1 19:14:3,ATS935794,Social,textrandom,az09-5,enter,start,Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/80.0.3987.149 Safari/537.36
+2020-4-1 19:17:7,ATS935794,Social,textrandom,az09-5,login,failure,Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/80.0.3987.149 Safari/537.36
+2020-4-1 19:17:11,ATS935794,Banking,textrandom,az09-5,enter,start,Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/80.0.3987.149 Safari/537.36
+2020-4-1 19:18:58,ATS935794,Banking,textrandom,az09-5,login,failure,Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/80.0.3987.149 Safari/537.36

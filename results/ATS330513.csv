@@ -1,0 +1,19 @@
+date,id,website,pswdType,idk,submition,progress,browser
+2020-4-1 22:25:27,ATS330513,Email,textrandom,az09-5,create,start,Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:74.0) Gecko/20100101 Firefox/74.0
+2020-4-1 22:25:37,ATS330513,Email,textrandom,az09-5,create,passwordSubmited,pw: IguanaCrocodileLeopardMeerkat
+2020-4-1 22:25:37,ATS330513,Email,textrandom,az09-5,create,done,Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:74.0) Gecko/20100101 Firefox/74.0
+2020-4-1 22:25:40,ATS330513,Social,textrandom,az09-5,create,start,Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:74.0) Gecko/20100101 Firefox/74.0
+2020-4-1 22:25:56,ATS330513,Social,textrandom,az09-5,create,passwordSubmited,pw: OtterPenguinCoyoteCrocodile
+2020-4-1 22:25:56,ATS330513,Social,textrandom,az09-5,create,done,Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:74.0) Gecko/20100101 Firefox/74.0
+2020-4-1 22:25:59,ATS330513,Banking,textrandom,az09-5,create,start,Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:74.0) Gecko/20100101 Firefox/74.0
+2020-4-1 22:26:6,ATS330513,Banking,textrandom,az09-5,create,passwordSubmited,pw: MonkeyNarwalJellyfishButterfly
+2020-4-1 22:26:6,ATS330513,Banking,textrandom,az09-5,create,done,Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:74.0) Gecko/20100101 Firefox/74.0
+2020-4-1 22:26:10,ATS330513,Email,textrandom,az09-5,enter,start,Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:74.0) Gecko/20100101 Firefox/74.0
+2020-4-1 22:27:0,ATS330513,Email,textrandom,az09-5,login,failure,Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:74.0) Gecko/20100101 Firefox/74.0
+2020-4-1 22:27:7,ATS330513,Email,textrandom,az09-5,login,success,Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:74.0) Gecko/20100101 Firefox/74.0
+2020-4-1 22:27:9,ATS330513,Social,textrandom,az09-5,enter,start,Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:74.0) Gecko/20100101 Firefox/74.0
+2020-4-1 22:27:34,ATS330513,Social,textrandom,az09-5,login,failure,Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:74.0) Gecko/20100101 Firefox/74.0
+2020-4-1 22:27:35,ATS330513,Social,textrandom,az09-5,login,failure,Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:74.0) Gecko/20100101 Firefox/74.0
+2020-4-1 22:27:50,ATS330513,Social,textrandom,az09-5,login,success,Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:74.0) Gecko/20100101 Firefox/74.0
+2020-4-1 22:27:53,ATS330513,Banking,textrandom,az09-5,enter,start,Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:74.0) Gecko/20100101 Firefox/74.0
+2020-4-1 22:28:20,ATS330513,Banking,textrandom,az09-5,login,success,Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:74.0) Gecko/20100101 Firefox/74.0

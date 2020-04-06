@@ -1,5 +1,7 @@
 from datetime import datetime as dt
+import os, glob
 import csv
+from pathlib import Path
 
 def parse_the_data(filename, user_dict):
 
@@ -18,6 +20,7 @@ def parse_the_data(filename, user_dict):
         #append to data
         for line in csv_reader:
             data.append(line)
+            #print(line)
 
     for line in data: #get ids
         if line.get('id') not in studentIDS:
@@ -25,13 +28,14 @@ def parse_the_data(filename, user_dict):
         #print(studentIDS)
 
     for id in studentIDS:
-        user_dict[id] = [[],[],[],[],[]] #timegood[0], timebad[1], totalgood[2], totalbad[3], total[4]
+        user_dict[id] = [[],[],[],[],[]]
+        #timegood[0], timebad[1], totalgood[2], totalbad[3], total[4]
 
     for id in studentIDS:
         for line in data:
-            if(line.get('id') == id and line.get('progress') == "success") :
+            if(line.get('id') == id and line.get('submition') == "login" and line.get('progress') == "success") :
                 glCounter +=1
-            if(line.get('id') == id and line.get('progress') == "failure") :
+            if(line.get('id') == id and line.get('submition') == "login" and line.get('progress') == "failure") :
                 blCounter +=1
 
         sumLogins = glCounter + blCounter
@@ -43,47 +47,47 @@ def parse_the_data(filename, user_dict):
 
     time_format = '%H:%M:%S'
 
+    print(user_dict)
+    #new parser
+    #loop through till you find each attempt end and then go back
     for id in studentIDS:
         for index, line in enumerate(data):
-            if ((index + 2 ) < len(data) and (index + 3) < len(data)):
-                nextnextline = data[index + 2]
-                nexttripleline = data[index + 3]
-                if (line.get('id') == id and line.get('submition') == "enter" and line.get('progress') == "start" and nextnextline.get('submition') == "login" ):
-                    #get array of times
-                    stamp = line.get('date').rsplit(' ', 1)
-                    etamp = nextnextline.get('date').rsplit(' ', 1)
-                    times = [stamp[1], etamp[1]]
-                    base_time = dt.strptime(times[0], time_format)
-                    seconds = [(dt.strptime(t, time_format)- base_time).total_seconds() for t in times]
+            if(line.get('id') == id and line.get('submition') == "enter" and line.get('progress') == "start"):
+                linecount = 1;
+                attempt = False;
+                while(attempt == False):
+                    if(linecount > 3):
+                        attempt = True;
+                    if((index + linecount) < len(data)):
+                        newline = data[index + linecount];
+                        if(newline.get('id') == id and newline.get('submition') == "login"):
+                            stamp = line.get('date').rsplit(' ', 1);
+                            etamp = newline.get('date').rsplit(' ', 1);
+                            times = [stamp[1], etamp[1]];
+                            base_time = dt.strptime(times[0], time_format);
+                            seconds = [(dt.strptime(t, time_format)- base_time).total_seconds() for t in times];
+                            print(seconds)
+                            if(newline.get('progress') == "success"):
+                                user_dict[id][0].append(seconds[1]);
+                            if(newline.get('progress') == "failure"):
+                                user_dict[id][1].append(seconds[1]);
 
-                    if(nextnextline.get('progress') == "success"):
-                        user_dict[id][0].append(seconds[1])
-                    if(nextnextline.get('progress') == "failure"):
-                        user_dict[id][1].append(seconds[1])
+                            linecount += 1;
+                            print(linecount);
+                            print(line);
+                        else:
+                            linecount += 1
+                    else:
+                        linecount+=1
 
-                elif (line.get('id') == id and line.get('submition') == "enter" and line.get('progress') == "start" and nexttripleline.get('submition') == "login" ):
-                    #get array of times
-                    stamp = line.get('date').rsplit(' ', 1)
-                    etamp = nexttripleline.get('date').rsplit(' ', 1)
-                    times = [stamp[1], etamp[1]]
-                    base_time = dt.strptime(times[0], time_format)
-                    seconds = [(dt.strptime(t, time_format)- base_time).total_seconds() for t in times]
-                    if(nexttripleline.get('progress') == "success"):
-                        user_dict[id][0].append(seconds[1])
-                    if(nexttripleline.get('progress') == "failure"):
-                        user_dict[id][1].append(seconds[1])
-
-    return user_dict
+    return user_dict;
 
 def addHeader(filename):
     with open(filename,newline='') as f:
         r = csv.reader(f)
         data = [line for line in r]
         if data[0] != ['date', 'id', 'website', 'pswdType', 'idk', 'submition', 'progress', 'browser']:
-            #writes header to text21 file
-            with open(filename,newline='') as f:
-                r = csv.reader(f)
-                data = [line for line in r]
+            #writes header to a csv file
             with open(filename,'w',newline='') as f:
                 w = csv.writer(f)
                 w.writerow(['date', 'id', 'website', 'pswdType', 'idk', 'submition', 'progress', 'browser'])
@@ -91,45 +95,45 @@ def addHeader(filename):
         else:
             print("headers for " + filename + " already added!")
 
+def w_to_r(f_names,ud,result):
+    with open(result, 'a') as r_file:
+        dash = "------------"
+        fieldnames = ['ID','total_logins','tot_good', 'tot_bad','time_good', 'time_bad']
+        writer = csv.DictWriter(r_file,fieldnames=fieldnames)
+
+        for index, user in enumerate(ud):
+            r_file.write('\n')
+            r_file.write(f_names[index] + dash + dash + dash + dash + dash)
+            r_file.write('\n')
+            for id in user:
+                writer.writerow({'ID': id, 'total_logins':user[id][4],
+                'tot_good':user[id][2],'tot_bad':user[id][3],
+                'time_good':user[id][0],'time_bad':user[id][1]})
+            r_file.write('\n')
+
+        print("Data has been parsed and written too file: result.csv")
+
 def main():
+    result = "ATS_results.csv"
+    f_names = []
+    results = Path("results/")
+    for file in results.rglob('*.csv'):
+        f_names.append(file.name)
 
-    addHeader('text21.csv')
-    addHeader('imagept21.csv')
+    #print(f_names)
+    ud = []
+    for file in f_names:
+        p = "results/"+file
+        addHeader(p)
+        user_dict = {}
+        user_dict = parse_the_data(p, user_dict)
+        ud.append(user_dict)
 
-    f_names = ['text21.csv','imagept21.csv']
-
-    with open('results.csv', 'w') as r_file:
+    with open(result, 'w') as r_file:
         fieldnames = ['ID','total_logins','tot_good', 'tot_bad','time_good', 'time_bad']
         writer = csv.DictWriter(r_file, fieldnames=fieldnames)
         writer.writeheader()
 
-    user_dict_txt = {}
-    user_dict_img = {}
-
-    user_dict_txt = parse_the_data(f_names[0], user_dict_txt)
-    user_dict_img = parse_the_data(f_names[1], user_dict_img)
-
-    with open('results.csv', 'a') as r_file:
-        dash = "------------"
-        r_file.write('\n')
-        r_file.write(f_names[0] + dash + dash + dash + dash + dash)
-        r_file.write('\n')
-        fieldnames = ['ID','total_logins','tot_good', 'tot_bad','time_good', 'time_bad']
-        writer = csv.DictWriter(r_file,fieldnames=fieldnames)
-        for id in user_dict_txt:
-            writer.writerow({'ID': id, 'total_logins':user_dict_txt[id][4],
-            'tot_good':user_dict_txt[id][2],'tot_bad':user_dict_txt[id][3],
-            'time_good':user_dict_txt[id][0],'time_bad':user_dict_txt[id][1]})
-        r_file.write('\n')
-
-        dash = "------------"
-        r_file.write('\n')
-        r_file.write(f_names[1] + dash + dash + dash + dash + dash)
-        r_file.write('\n')
-        for id in user_dict_img:
-            writer.writerow({'ID': id, 'total_logins':user_dict_img[id][4],
-            'tot_good':user_dict_img[id][2],'tot_bad':user_dict_img[id][3],
-            'time_good':user_dict_img[id][0],'time_bad':user_dict_img[id][1]})
-        print("Data has been parsed and written too file: results.csv")
+    w_to_r(f_names,ud,result)
 
 main()

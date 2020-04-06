@@ -1,0 +1,16 @@
+date,id,website,pswdType,idk,submition,progress,browser
+2020-4-1 22:8:0,ATS986982,Email,textrandom,az09-5,create,start,Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:74.0) Gecko/20100101 Firefox/74.0
+2020-4-1 22:8:22,ATS986982,Email,textrandom,az09-5,create,passwordSubmited,pw: TigerKangarooLemurParrot
+2020-4-1 22:8:22,ATS986982,Email,textrandom,az09-5,create,done,Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:74.0) Gecko/20100101 Firefox/74.0
+2020-4-1 22:8:31,ATS986982,Social,textrandom,az09-5,create,start,Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:74.0) Gecko/20100101 Firefox/74.0
+2020-4-1 22:8:54,ATS986982,Social,textrandom,az09-5,create,passwordSubmited,pw: TigerOctopusWalrusSquirrel
+2020-4-1 22:8:54,ATS986982,Social,textrandom,az09-5,create,done,Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:74.0) Gecko/20100101 Firefox/74.0
+2020-4-1 22:9:1,ATS986982,Banking,textrandom,az09-5,create,start,Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:74.0) Gecko/20100101 Firefox/74.0
+2020-4-1 22:9:12,ATS986982,Banking,textrandom,az09-5,create,passwordSubmited,pw: CapybaraSquirrelCapybaraHummingbird
+2020-4-1 22:9:12,ATS986982,Banking,textrandom,az09-5,create,done,Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:74.0) Gecko/20100101 Firefox/74.0
+2020-4-1 22:9:18,ATS986982,Email,textrandom,az09-5,enter,start,Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:74.0) Gecko/20100101 Firefox/74.0
+2020-4-1 22:11:13,ATS986982,Email,textrandom,az09-5,login,success,Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:74.0) Gecko/20100101 Firefox/74.0
+2020-4-1 22:11:15,ATS986982,Social,textrandom,az09-5,enter,start,Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:74.0) Gecko/20100101 Firefox/74.0
+2020-4-1 22:12:5,ATS986982,Social,textrandom,az09-5,login,success,Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:74.0) Gecko/20100101 Firefox/74.0
+2020-4-1 22:12:7,ATS986982,Banking,textrandom,az09-5,enter,start,Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:74.0) Gecko/20100101 Firefox/74.0
+2020-4-1 22:12:44,ATS986982,Banking,textrandom,az09-5,login,success,Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:74.0) Gecko/20100101 Firefox/74.0

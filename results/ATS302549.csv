@@ -1,0 +1,29 @@
+date,id,website,pswdType,idk,submition,progress,browser
+2020-4-4 16:1:44,ATS302549,Email,textrandom,az09-5,create,start,Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_3) AppleWebKit/605.1.15 (KHTML, like Gecko) Version/13.0.5 Safari/605.1.15
+2020-4-4 16:2:33,ATS302549,Email,textrandom,az09-5,create,pwtest,good
+2020-4-4 16:2:36,ATS302549,Email,textrandom,az09-5,create,passwordSubmited,pw: KangarooTurtleSquirrelRat
+2020-4-4 16:2:36,ATS302549,Email,textrandom,az09-5,create,done,Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_3) AppleWebKit/605.1.15 (KHTML, like Gecko) Version/13.0.5 Safari/605.1.15
+2020-4-4 16:2:43,ATS302549,Social,textrandom,az09-5,create,start,Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_3) AppleWebKit/605.1.15 (KHTML, like Gecko) Version/13.0.5 Safari/605.1.15
+2020-4-4 16:3:24,ATS302549,Social,textrandom,az09-5,create,passwordSubmited,pw: NarwalLionLionFox
+2020-4-4 16:3:24,ATS302549,Social,textrandom,az09-5,create,done,Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_3) AppleWebKit/605.1.15 (KHTML, like Gecko) Version/13.0.5 Safari/605.1.15
+2020-4-4 16:3:37,ATS302549,Social,textrandom,az09-5,create,passwordSubmited,pw: NarwalLionLionFox
+2020-4-4 16:3:37,ATS302549,Social,textrandom,az09-5,create,done,Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_3) AppleWebKit/605.1.15 (KHTML, like Gecko) Version/13.0.5 Safari/605.1.15
+2020-4-4 16:3:39,ATS302549,Social,textrandom,az09-5,create,passwordSubmited,pw: NarwalLionLionFox
+2020-4-4 16:3:39,ATS302549,Social,textrandom,az09-5,create,done,Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_3) AppleWebKit/605.1.15 (KHTML, like Gecko) Version/13.0.5 Safari/605.1.15
+2020-4-4 16:3:52,ATS302549,Banking,textrandom,az09-5,create,start,Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_3) AppleWebKit/605.1.15 (KHTML, like Gecko) Version/13.0.5 Safari/605.1.15
+2020-4-4 16:4:38,ATS302549,Banking,textrandom,az09-5,create,passwordSubmited,pw: MeerkatLeopardWallabyAlligator
+2020-4-4 16:4:38,ATS302549,Banking,textrandom,az09-5,create,done,Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_3) AppleWebKit/605.1.15 (KHTML, like Gecko) Version/13.0.5 Safari/605.1.15
+2020-4-4 16:4:45,ATS302549,Banking,textrandom,az09-5,create,passwordSubmited,pw: MeerkatLeopardWallabyAlligator
+2020-4-4 16:4:45,ATS302549,Banking,textrandom,az09-5,create,done,Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_3) AppleWebKit/605.1.15 (KHTML, like Gecko) Version/13.0.5 Safari/605.1.15
+2020-4-4 16:4:50,ATS302549,Banking,textrandom,az09-5,create,pwtest,bad
+2020-4-4 16:5:2,ATS302549,Banking,textrandom,az09-5,create,pwtest,good
+2020-4-4 16:5:3,ATS302549,Banking,textrandom,az09-5,create,passwordSubmited,pw: MeerkatLeopardWallabyAlligator
+2020-4-4 16:5:3,ATS302549,Banking,textrandom,az09-5,create,done,Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_3) AppleWebKit/605.1.15 (KHTML, like Gecko) Version/13.0.5 Safari/605.1.15
+2020-4-4 16:5:7,ATS302549,Email,textrandom,az09-5,enter,start,Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_3) AppleWebKit/605.1.15 (KHTML, like Gecko) Version/13.0.5 Safari/605.1.15
+2020-4-4 16:6:30,ATS302549,Email,textrandom,az09-5,login,success,Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_3) AppleWebKit/605.1.15 (KHTML, like Gecko) Version/13.0.5 Safari/605.1.15
+2020-4-4 16:6:33,ATS302549,Social,textrandom,az09-5,enter,start,Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_3) AppleWebKit/605.1.15 (KHTML, like Gecko) Version/13.0.5 Safari/605.1.15
+2020-4-4 16:7:12,ATS302549,Social,textrandom,az09-5,login,failure,Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_3) AppleWebKit/605.1.15 (KHTML, like Gecko) Version/13.0.5 Safari/605.1.15
+2020-4-4 16:7:18,ATS302549,Social,textrandom,az09-5,login,failure,Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_3) AppleWebKit/605.1.15 (KHTML, like Gecko) Version/13.0.5 Safari/605.1.15
+2020-4-4 16:7:59,ATS302549,Social,textrandom,az09-5,login,failure,Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_3) AppleWebKit/605.1.15 (KHTML, like Gecko) Version/13.0.5 Safari/605.1.15
+2020-4-4 16:8:5,ATS302549,Banking,textrandom,az09-5,enter,start,Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_3) AppleWebKit/605.1.15 (KHTML, like Gecko) Version/13.0.5 Safari/605.1.15
+2020-4-4 16:8:16,ATS302549,Banking,textrandom,az09-5,login,failure,Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_3) AppleWebKit/605.1.15 (KHTML, like Gecko) Version/13.0.5 Safari/605.1.15
