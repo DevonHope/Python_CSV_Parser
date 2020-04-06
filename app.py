@@ -46,8 +46,6 @@ def parse_the_data(filename, user_dict):
         blCounter = 0
 
     time_format = '%H:%M:%S'
-
-    print(user_dict)
     #new parser
     #loop through till you find each attempt end and then go back
     for id in studentIDS:
@@ -66,15 +64,12 @@ def parse_the_data(filename, user_dict):
                             times = [stamp[1], etamp[1]];
                             base_time = dt.strptime(times[0], time_format);
                             seconds = [(dt.strptime(t, time_format)- base_time).total_seconds() for t in times];
-                            print(seconds)
                             if(newline.get('progress') == "success"):
                                 user_dict[id][0].append(seconds[1]);
                             if(newline.get('progress') == "failure"):
                                 user_dict[id][1].append(seconds[1]);
 
                             linecount += 1;
-                            print(linecount);
-                            print(line);
                         else:
                             linecount += 1
                     else:
